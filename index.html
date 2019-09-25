@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <title>Canvas</title>
+    <style type="text/css">
+    canvas {
+        border: 1px solid black;
+        z-index: 1;
+    }
+    body {
+        margin: 0;
+    }
+    .button{
+        padding-left: 600px;
+        padding-right: 800px; 
+        justify-content: center;
+        z-index: 2;
+    }
+    </style>
+</head>
+<body>
+
+     <div class="button shift-camera-button">
+        <div class="border">
+            <div class="left-plane"></div>
+            <div class="right-plane"></div>
+        </div>
+        <div class="text">Lets Dive in</div>
+    </div>
+    </div>  
+ <canvas></canvas>
+ <script>
+ var canvas = document.querySelector('canvas')
+ var c = canvas.getContext('2d');
+ //Button postion and dimensions
+ var buttonX= 70;
+ var buttonY = 80;
+ var buttonW = 60;
+ var buttonH = 30;
+
+ //Render button
+ c.fillStyle = 'red';
+ c.fillRect(buttonX, buttonY, buttonW, buttonH);
+//Add event listener to canvas element
+// canvas.addEventListener('click', function(event){
+//     if (
+//         event.x > buttonX &&
+//         event.x < buttonX + buttonW &&
+//         event.y > buttonY &&
+//         event.y < buttonY + buttonH
+//     ){
+//         //Execute if button is cliked
+//         alert('Button was cliked');
+//     }
+// });
+ </script>
+ <script src="canvans.js"></script>
+</body>
+</html>
